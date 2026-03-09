@@ -25,7 +25,7 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-sm md:max-w-none mx-auto">
           {gymConfig.pricing.map((plan, index) => (
-            <div key={index} className={`relative bg-primary-darkGray/90 ${plan.popular ? 'ring-2 ring-primary-yellow scale-105' : ''} p-6 transition-all duration-300 hover:ring-2 hover:ring-primary-yellow transform hover:-translate-y-2`}>
+            <div key={index} className={`relative bg-primary-darkGray/90 pkr{plan.popular ? 'ring-2 ring-primary-yellow scale-105' : ''} p-6 transition-all duration-300 hover:ring-2 hover:ring-primary-yellow transform hover:-translate-y-2`}>
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary-yellow text-primary-black px-4 py-1 font-bold text-xs">
                   MOST POPULAR
@@ -34,7 +34,7 @@ const Pricing = () => {
               
               <h3 className="text-2xl lg:text-2xl font-display font-bold mb-3 lg:mb-3 text-primary-yellow">{plan.name}</h3>
               <div className="mb-5 lg:mb-6">
-                <span className="text-4xl lg:text-5xl font-display font-bold text-white">${plan.price}</span>
+                <span className="text-4xl lg:text-5xl font-display font-bold text-white">pkr{plan.price}</span>
                 <span className="text-gray-400 text-base lg:text-lg">/{plan.period}</span>
               </div>
 
@@ -51,10 +51,10 @@ const Pricing = () => {
 
               <button 
                 onClick={() => {
-                  const message = `Hi, I'm interested in the ${plan.name} plan (Rs. ${plan.price}/month). Please provide more details.`
-                  window.open(`https://wa.me/${gymConfig.whatsapp}?text=${encodeURIComponent(message)}`, '_blank')
+                  const message = `Hi, I'm interested in the pkr{plan.name} plan (Rs. pkr{plan.price}/month). Please provide more details.`
+                  window.open(`https://wa.me/pkr{gymConfig.whatsapp}?text=pkr{encodeURIComponent(message)}`, '_blank')
                 }}
-                className={`w-full py-3 font-bold transition-all ${plan.popular ? 'bg-primary-yellow text-primary-black hover:bg-red-600 hover:text-white' : 'bg-gray-700 text-white hover:bg-primary-yellow hover:text-primary-black'}`}
+                className={`w-full py-3 font-bold transition-all pkr{plan.popular ? 'bg-primary-yellow text-primary-black hover:bg-red-600 hover:text-white' : 'bg-gray-700 text-white hover:bg-primary-yellow hover:text-primary-black'}`}
               >
                 SELECT PLAN
               </button>
