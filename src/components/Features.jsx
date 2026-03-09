@@ -34,7 +34,7 @@ const Features = () => {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative overflow-hidden">
             <img 
-              src="/Assets/Gym Image.jpg" 
+              src="/Assets/gym-image.jpg" 
               alt="Gym City Abbottabad Interior" 
               className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-500"
             />
