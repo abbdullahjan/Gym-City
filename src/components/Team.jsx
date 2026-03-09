@@ -3,13 +3,13 @@ import React from 'react'
 const Team = () => {
   const members = [
     {
-      image: "/Assets/person1.jpg",
+      image: "/Assets/Person1.jpg",
     },
     {
-      image: "/Assets/person2.jpg",
+      image: "/Assets/Person2.jpg",
     },
     {
-      image: "/Assets/person3.jpg",
+      image: "/Assets/Person3.jpg",
     }
   ]
 
